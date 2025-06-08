@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Badlaav Web-Builder</title>
+    <link rel="icon" href="Capture.PNG" type="image/png">
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&family=Lato:wght@400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="header">
+    <div class="header-content">
+        <div class="logo">
+            <h1>🖥️ BADLAAV</h1>
+            <p class="tagline">Create. Design. Deploy.</p>
+                <div class="dropdown">
+            <button class="dropdown-btn">Templates ▼</button>
+            <div class="dropdown-content">
+                <a href="#" data-template="header">Header</a>
+                <a href="#" data-template="hero">Hero Section</a>
+                <a href="#" data-template="footer">Footer</a>
+                <a href="#" data-template="contact">Contact Form</a>
+            </div>
+        </div>
+        </div>
+        <div class="header-actions">
+            <button id="preview-btn" class="header-btn">
+                <span class="btn-icon">👁️</span> Preview
+            </button>
+            <button id="export-btn" class="header-btn">
+                <span class="btn-icon">💾</span> Export
+            </button>
+            
+        </div>
+    </div>
+</div>
+     <div class="container">
+        
+        <div class="sidebar">
+            <h3>Add Elements</h3>
+            <div class="button" draggable="true" data-type="text">
+                Text Box
+            </div>
+            <div class="button" draggable="true" data-type="button">
+                Button
+            </div>
+            <div class="button" draggable="true" data-type="image">
+                Image
+            </div>
+        </div>
+
+        <div class="canvas-container">
+            <div id="canvas"></div>
+        </div>
+        
+        <div class="property-panel">
+            <h3>Properties</h3>
+            <div id="property-form" style="display: none;">
+                <div class="property-group">
+                    <label for="element-content">Content</label>
+                    <textarea id="element-content" rows="3"></textarea>
+                </div>
+                <div class="property-group">
+                    <label for="element-font-size">Font Size</label>
+                    <select id="element-font-size">
+                        <option value="12px">Small</option>
+                        <option value="16px" selected>Medium</option>
+                        <option value="24px">Large</option>
+                        <option value="32px">Extra Large</option>
+                    </select>
+                </div>
+                <div class="property-group">
+                    <label for="element-color">Text Color</label>
+                    <input type="color" id="element-color" value="#000000">
+                </div>
+                <div class="property-group" id="image-url-group" style="display: none;">
+                    <label for="element-image-url">Image URL</label>
+                    <input type="text" id="element-image-url" placeholder="https://example.com/image.jpg">
+                </div>
+                <div class="property-group" id="button-bg-group" style="display: none;">
+                    <label for="element-bg-color">Button Color</label>
+                    <input type="color" id="element-bg-color" value="#3498db">
+                </div>
+                <div class="property-group">
+                    <button id="delete-element">Delete Element</button>
+                </div>
+            </div>
+            <div id="no-element-selected">
+                <p>Select an element to edit its properties</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script src="script.js"></script>
